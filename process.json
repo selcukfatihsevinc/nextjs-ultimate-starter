@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "nextjs-ultimate-starter",
+      "script": "./server/index.js",
+      "env": {
+        "NODE_ENV": "development",
+        "watch": "./server",
+        "instances": 1
+      },
+      "env_test": {
+        "NODE_ENV": "test",
+        "NODE_PORT": 8080,
+        "PORT": 8080,
+        "instances": 1
+      },
+      "env_production": {
+        "NODE_ENV": "production",
+        "NODE_PORT": 8080,
+        "PORT": 8080,
+        "instances": "max"
+      },
+      "exec_mode": "cluster"
+    }
+  ]
+}

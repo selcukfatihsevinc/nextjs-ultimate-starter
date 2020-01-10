@@ -1,0 +1,31 @@
+{
+  "extends": ["airbnb", "prettier/react"],
+  "env": { "browser": true },
+  "plugins": ["react", "jsx-a11y"],
+  "rules": {
+    "arrow-parens": 0,
+    "object-curly-newline": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [".storybook/**/*.js", "src/**/*.stories.{js,jsx}"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".jsx", ".json"],
+        "map": [
+          ["@components", "./src/components"],
+          ["@pure", "./src/_shared/Pure"],
+          ["@hoc", "./src/_shared/HOC"],
+          ["@utils", "./src/utils"],
+          ["@actions", "./src/redux/actions"],
+          ["@reducers", "./src/redux/reducers"]
+        ]
+      }
+    }
+  }
+}
